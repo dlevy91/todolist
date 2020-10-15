@@ -1,0 +1,17 @@
+@model TaskTracker.Models.UserTask
+
+<div class="jumbotron">
+  <h1 class="display-4">Are you finished your task?</h1>
+  <p class="lead">If you are finished @Model.taskName then please click "Finish" below. If you are not finished click "Go Back".</p>
+  <hr class="my-4">
+  <p class="lead">
+    <a asp-area = "" asp-action = "DeleteTask" asp-route-taskID = "@Model.id">
+        <button class = "btn btn-outline-success">Finish</button>
+    </a>
+  </p>
+  <p class="lead">
+    <a asp-area = "" asp-action = "ViewDetails" asp-route-taskID = "@Model.id">
+        <button class = "btn btn-outline-warning">Go Back</button>
+    </a>
+  </p>
+</div>

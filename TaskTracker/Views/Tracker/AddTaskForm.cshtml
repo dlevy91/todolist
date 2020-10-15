@@ -1,0 +1,9 @@
+@model TaskTracker.Models.UserTask
+
+<h1 id="textbox">Add a new task!</h1>
+
+@using (@Html.BeginForm("AddTask", "Tracker"))
+{
+    <partial name = "_forms" model = "@Model"/>
+    <button type = "submit" class = "btn btn-outline-success">Submit</button>
+}

@@ -1,0 +1,13 @@
+@model TaskTracker.Models.UserTask
+
+<div class="form-group">
+    @Html.LabelFor(t => t.taskName)
+    @Html.TextBoxFor(t => t.taskName, new {@class = "form-control"})
+    @Html.ValidationMessageFor(t => t.taskName)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(t => t.taskDescription)
+    @Html.TextBoxFor(t => t.taskDescription, new {@class = "form-control"})
+    @Html.ValidationMessageFor(t => t.taskDescription)
+</div>

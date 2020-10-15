@@ -1,0 +1,12 @@
+@model TaskTracker.DAO.TaskTrackerDbContext
+
+<h1 id="textbox">Tasks to be done.</h1>
+
+<div class="card-columns">
+
+@foreach (UserTask task in @Model.Tasks)
+{
+    <a asp-area = "" asp-action = "ViewDetails" asp-route-taskID = "@task.id">
+    <partial name = "_display" model = "@task"/>
+    </a>
+}

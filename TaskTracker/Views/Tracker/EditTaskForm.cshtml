@@ -1,0 +1,12 @@
+@model TaskTracker.Models.UserTask
+
+<h1 id="textbox">Edit @Model.taskName</h1>
+
+@using (@Html.BeginForm("EditTask", "Tracker"))
+{
+    <partial name = "_forms" model = "@Model"/>
+    <div>
+        @Html.HiddenFor(t => t.id)
+    </div>
+    <button type = "submit" class = "btn btn-outline-success">Submit</button>
+}

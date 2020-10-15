@@ -1,0 +1,13 @@
+@model TaskTracker.Models.UserTask
+
+<h1 id="textbox">@Model.taskName Description</h1>
+
+<partial name = "_display" model = "@Model"/>
+
+<a asp-area = "" asp-action = "EditTaskForm" asp-route-taskID = "@Model.id">
+    <button class = "btn btn-outline-warning" id = "detailSpace">Edit Task</button>
+</a>
+
+<a asp-area = "" asp-action = "TaskFinish" asp-route-taskID = "@Model.id">
+    <button class = "btn btn-outline-danger" id="detailSpace">Finished Task</button>
+</a>
