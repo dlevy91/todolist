@@ -15,7 +15,26 @@ namespace TaskTracker.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("TaskTracker.Models.Task", b =>
+            modelBuilder.Entity("TaskTracker.Models.CompleteTask", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("taskDescription")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("taskName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("CompletedTasks");
+                });
+
+            modelBuilder.Entity("TaskTracker.Models.UserTask", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()

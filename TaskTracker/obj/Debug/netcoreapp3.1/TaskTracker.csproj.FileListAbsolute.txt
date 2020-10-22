@@ -383,3 +383,5 @@ C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3
 C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3.1\Razor\Views\Tracker\ViewDetails.cshtml.g.cs
 C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3.1\Razor\Views\Tracker\EditTaskForm.cshtml.g.cs
 C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3.1\Razor\Views\Tracker\TaskFinish.cshtml.g.cs
+C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3.1\Razor\Views\Tracker\_completeDisplay.cshtml.g.cs
+C:\Users\student\Code_School\Projects\todolist\TaskTracker\obj\Debug\netcoreapp3.1\Razor\Views\Tracker\MoveTaskForm.cshtml.g.cs

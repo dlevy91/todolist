@@ -8,7 +8,7 @@ using TaskTracker.DAO;
 namespace TaskTracker.Migrations
 {
     [DbContext(typeof(TaskTrackerDbContext))]
-    [Migration("20201015152411_init")]
+    [Migration("20201022024235_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,7 +17,26 @@ namespace TaskTracker.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("TaskTracker.Models.Task", b =>
+            modelBuilder.Entity("TaskTracker.Models.CompleteTask", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("taskDescription")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("taskName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("CompletedTasks");
+                });
+
+            modelBuilder.Entity("TaskTracker.Models.UserTask", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()

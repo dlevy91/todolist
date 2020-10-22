@@ -100,7 +100,7 @@ namespace TaskTracker.Controllers
             _context.Remove(foundTask);
             _context.SaveChanges();
 
-            return RedirectToAction("ViewTasks");
+            return RedirectToAction("FinishedTask");
             }
             else{
                 return Content("No Task found");
@@ -116,6 +116,63 @@ namespace TaskTracker.Controllers
             }
             else{
                 return Content("No Task Found.");
+            }
+        }
+//----------------------------------------------------------------------------------------------------
+
+        public IActionResult moveTask(CompleteTask newTask, int taskID)
+        {
+            CompleteTask foundTask = _context.CompletedTasks.FirstOrDefault(t => t.id == taskID);
+
+            if(foundTask != null)
+            {
+                if(ModelState.IsValid)
+                {
+                foundTask.taskDescription = newTask.taskDescription;
+                foundTask.taskName = newTask.taskName;
+                _context.SaveChanges();
+
+                return RedirectToAction("DeleteTask");
+                }
+                else{
+                    return View("CompleteTaskForm", newTask);
+                }
+
+            }
+            else{
+                return Content("Content could not be moved");
+            }
+        }
+
+        public IActionResult MoveTaskForm(int taskID)
+        {
+            UserTask foundTask = _context.Tasks.FirstOrDefault(t => t.id == taskID);
+            if(foundTask != null)
+            {
+            return View(foundTask);
+            }
+            else{
+                return Content("No Task Found");
+            }
+        }
+
+//----------------------------------------------------------------------------------------------------
+
+        public IActionResult FinishedTask()
+        {
+            return View(_context);
+        }
+
+        public IActionResult FinishedDetails(int taskID)
+        {
+            CompleteTask foundTask = _context.CompletedTasks.FirstOrDefault(t => t.id == taskID);
+
+            if(foundTask != null)
+            {
+                return View(foundTask);
+            }
+            else{
+                return Content("Content not viewed");
             }
         }
     }

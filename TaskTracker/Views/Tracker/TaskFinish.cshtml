@@ -5,7 +5,7 @@
   <p class="lead">If you are finished @Model.taskName then please click "Finish" below. If you are not finished click "Go Back".</p>
   <hr class="my-4">
   <p class="lead">
-    <a asp-area = "" asp-action = "DeleteTask" asp-route-taskID = "@Model.id">
+    <a asp-area = "" asp-action = "MoveTask" asp-route-taskID = "@Model.id">
         <button class = "btn btn-outline-success">Finish</button>
     </a>
   </p>

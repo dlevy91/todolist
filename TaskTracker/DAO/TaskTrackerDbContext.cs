@@ -9,5 +9,7 @@ namespace TaskTracker.DAO
             : base(options) { }
 
         public DbSet<UserTask> Tasks {get; set;}
+
+        public DbSet<CompleteTask> CompletedTasks {get; set;}
     }
 }

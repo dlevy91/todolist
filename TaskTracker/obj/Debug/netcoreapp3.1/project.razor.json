@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\student\\Code_School\\Projects\\todolist\\TaskTracker\\Views\\Tracker\\MoveTaskForm.cshtml",
+      "TargetPath": "Views\\Tracker\\MoveTaskForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\student\\Code_School\\Projects\\todolist\\TaskTracker\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -14434,6 +14439,11 @@
     {
       "FilePath": "c:\\Users\\student\\Code_School\\Projects\\todolist\\TaskTracker\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\student\\Code_School\\Projects\\todolist\\TaskTracker\\Views\\Tracker\\_completeDisplay.cshtml",
+      "TargetPath": "Views\\Tracker\\_completeDisplay.cshtml",
       "FileKind": "mvc"
     },
     {

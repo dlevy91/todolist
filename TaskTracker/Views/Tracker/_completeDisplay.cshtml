@@ -1,0 +1,9 @@
+@model TaskTracker.Models.CompleteTask
+
+<div class="card border-info mb-3" style="max-width: 18rem;" id="cardbackground">
+  <div class="card-header">Task @Model.id</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">@Model.taskName</h5>
+    <p class="card-text">@Model.taskDescription</p>
+  </div>
+</div>
